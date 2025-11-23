@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoulders of Giants - Creators of MinionMates</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import the Cinzel font to match the epic/stone style of the logo */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+        /* Custom styles and colors based on the logo's cosmic/stone theme */
+        :root {
+            --color-primary: #222E4D; /* Deep Cosmic Blue */
+            --color-secondary: #D4AF37; /* Bronze/Gold Accent */
+            --color-accent: #4AC2F4; /* Star/Glow Cyan */
+            --color-dark: #171717; /* Near Black / Dark Stone */
+        }
+        .text-gradient {
+            /* Cosmic gradient from cyan glow to bronze gold */
+            background-image: linear-gradient(to right, var(--color-accent), var(--color-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .studio-bg {
+            background-color: var(--color-dark);
+            /* Updated tile color to fit darker theme */
+            background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23222E4D' fill-opacity='0.15'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v2H1V1zM1 3h2v40H1V3zm3 0h38v2H3V3zM3 5h2v40H3V5zm3 0h36v2H5V5zm1 2h2v38H7V7zm3 0h32v2H9V7zm1 2h2v34H11V9zm3 0h28v2H13V9zm1 2h2v32H15V11zm3 0h24v2H17V11zm1 2h2v30H19V13zm3 0h20v2H21V13zm1 2h2v28H23V15zm3 0h16v2H25V15zm1 2h2v26H27V17zm3 0h12v2H29V17zm1 2h2v24H31V19zm3 0h8v2H33V19zm1 2h2v22H35V21zm3 0h4v2H37V21zm1 2h2v20H39V23z' fill='%23171717'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .minion-bg {
+            background-color: var(--color-dark);
+            /* Using the new primary color for the background glow */
+            background-image: radial-gradient(circle at 10% 20%, rgba(34,46,77,0.2) 0%, rgba(34,46,77,0.05) 50%, rgba(34,46,77,0) 100%),
+                              radial-gradient(circle at 90% 80%, rgba(74,194,244,0.05) 0%, rgba(74,194,244,0) 50%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Cinzel is added as the primary font to give an epic, stone-like feel
+                        sans: ['Cinzel', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'sog-dark': 'var(--color-dark)',
+                        'sog-primary': 'var(--color-primary)',
+                        'sog-secondary': 'var(--color-secondary)',
+                        'sog-accent': 'var(--color-accent)', 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-white bg-sog-dark">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-sog-dark/95 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <div class="flex items-center space-x-3">
+                <!-- SVG Logo in Header -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMxYTFhMWEiLz4KCiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNpbHZlckdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0UwRTBFMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzU3NTc1O3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZEdyYWRpZW50IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRDcwMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkY4QzAwO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCwgMTUwKSI+CiAgICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjEwMCIgcj0iNzAiIHN0cm9rZT0idXJsKCNzaWx2ZXJHcmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMjAiIGZpbGw9Im5vbmUiIC8+CiAgICAgCiAgICA8cGF0aCBkPSJNIDIyMCAzMCBBIDcwIDcwIDAgMSAwIDIyMCAxNzAgTCAyMjAgMTAwIEggMTgwIiAKICAgICAgICAgIHN0cm9rZT0idXJsKCNzaWx2ZXJHcmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwvZz4KCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAwLCA4MCkiPgogICAgPHBhdGggZD0iTSA1MCAyMDAgQyAtMjAgMjAwLCAtMjAgMTQwLCA1MCAxNDAgQyAxMjAgMTQwLCAxMjAgODAsIDUwIDgwIiAKICAgICAgICAgIHN0cm9rZT0idXJsKCNnb2xkR3JhZGllbnQpIiBzdHJva2Utd2lkdGg9IjI1IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICAgCiAgICA8cGF0aCBkPSJNIDUwIDIwIEwgNjAgNjAgTCAxMDAgNzAgTCA2MCA4MCBMIDUwIDEyMCBMIDQwIDgwIEwgMCA3MCBMIDQwIDYwIFoiIAogICAgICAgICAgZmlsbD0idXJsKCNnb2xkR3JhZGllbnQpIiAvPgogIDwvZz4KCiAgPHRleHQgeD0iMjUwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMyIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+U0hPVUxFREFSUzwvdGV4dD4KICA8dGV4dCB4PSIyNTAiIHk9IjQ2MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjMyIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+T0YgR0lBTlRTPC90ZXh0Pgo8L3N2Zz4=` 
+                     alt="Shoulders of Giants Logo" class="h-14 w-14 shadow-lg object-cover">
+                <span class="text-2xl font-extrabold text-sog-secondary tracking-wider">Shoulders of Giants</span>
+            </div>
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#studio" class="text-gray-300 hover:text-sog-secondary transition duration-300">The Studio</a>
+                <a href="#minionmates" class="text-gray-300 hover:text-sog-secondary transition duration-300">MinionMates</a>
+                <a href="#presskit" class="text-gray-300 hover:text-sog-secondary transition duration-300">Press Kit</a>
+                <a href="#contact" class="text-gray-300 hover:text-sog-secondary transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (simplified for single-file demo) -->
+            <button class="md:hidden p-2 rounded-md hover:bg-sog-primary transition duration-300">
+                <svg class="w-6 h-6 text-sog-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="studio-bg pt-24 pb-32 text-center relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- SVG Logo in Hero Section -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMxYTFhMWEiLz4KCiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNpbHZlckdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0UwRTBFMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzU3NTc1O3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZEdyYWRpZW50IiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRDcwMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRkY4QzAwO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCwgMTUwKSI+CiAgICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjEwMCIgcj0iNzAiIHN0cm9rZT0idXJsKCNzaWx2ZXJHcmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMjAiIGZpbGw9Im5vbmUiIC8+CiAgICAgCiAgICA8cGF0aCBkPSJNIDIyMCAzMCBBIDcwIDcwIDAgMSAwIDIyMCAxNzAgTCAyMjAgMTAwIEggMTgwIiAKICAgICAgICAgIHN0cm9rZT0idXJsKCNzaWx2ZXJHcmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDwvZz4KCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAwLCA4MCkiPgogICAgPHBhdGggZD0iTSA1MCAyMDAgQyAtMjAgMjAwLCAtMjAgMTQwLCA1MCAxNDAgQyAxMjAgMTQwLCAxMjAgODAsIDUwIDgwIiAKICAgICAgICAgIHN0cm9rZT0idXJsKCNnb2xkR3JhZGllbnQpIiBzdHJva2Utd2lkdGg9IjI1IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICAgCiAgICA8cGF0aCBkPSJNIDUwIDIwIEwgNjAgNjAgTCAxMDAgNzAgTCA2MCA4MCBMIDUwIDEyMCBMIDQwIDgwIEwgMCA3MCBMIDQwIDYwIFoiIAogICAgICAgICAgZmlsbD0idXJsKCNnb2xkR3JhZGllbnQpIiAvPgogIDwvZz4KCiAgPHRleHQgeD0iMjUwIiB5PSI0MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMyIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+U0hPVUxFREFSUzwvdGV4dD4KICA8dGV4dCB4PSIyNTAiIHk9IjQ2MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjMyIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+T0YgR0lBTlRTPC90ZXh0Pgo8L3N2Zz4=` 
+                 alt="Shoulders of Giants Logo" class="mx-auto h-52 w-52 mb-8 shadow-2xl">
+
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                Welcome to <span class="text-gradient">Shoulders of Giants</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Building worlds of wonder, one giant leap at a time.
+            </p>
+
+            <a href="#minionmates" class="inline-block px-10 py-4 bg-sog-secondary text-sog-dark font-bold text-lg rounded-full shadow-2xl transform hover:scale-105 transition duration-300 hover:shadow-sog-secondary/50">
+                Discover Our First Game: MinionMates
+            </a>
+        </div>
+    </section>
+
+    <!-- MinionMates Game Section -->
+    <section id="minionmates" class="minion-bg py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-3">MinionMates</h2>
+                <p class="text-xl text-gray-300">Your tiny companions need you. Care for them, watch them grow.</p>
+            </div>
+
+            <!-- Game Overview & CTA -->
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20">
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-bold mb-4">Tend to the Wellbeing of Your Little Mates</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        MinionMates is a charming mobile pet-care game where you are responsible for the health, happiness, and overall well-being of a diverse cast of adorable creatures. From feeding and bathing to playing and studying, every action matters!
+                    </p>
+                    <ul class="space-y-3 text-gray-200 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Beautifully designed, changing backgrounds.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Dozens of unique MinionMates to collect and bond with.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Intuitive interface for tracking Hunger, Energy, and Happiness.
+                        </li>
+                    </ul>
+
+                    <p class="text-xl font-semibold mt-8">
+                        Coming Soon to iOS and Android!
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-4">
+                        <a href="#" class="inline-flex items-center px-6 py-3 bg-sog-accent text-sog-dark font-extrabold rounded-lg shadow-xl transform hover:scale-[1.02] transition duration-300 hover:shadow-sog-accent/50">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 18a6 6 0 100-12 6 6 0 000 12z"/></svg>
+                            Pre-Register (Link TBD)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Screenshots Gallery -->
+                <div class="lg:w-1/2 flex justify-center space-x-4 p-4 bg-white/10 rounded-xl shadow-2xl relative">
+                    <!-- Main Image (Unicorn Mate) -->
+                    <img src="uploaded:image_bf3845.jpg-bf9f1e6b-fcd9-4d6a-bb3e-fc4ccb2b6f4e" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/250x500/222E4D/D4AF37?text=MinionMates+Screenshot';"
+                         alt="MinionMates Gameplay Screenshot 1" class="w-48 md:w-64 h-auto rounded-xl shadow-2xl transform transition duration-500 hover:scale-[1.05] relative z-10">
+                    
+                    <!-- Side Image (Green Mate Stats) -->
+                    <img src="uploaded:image_bf386b.jpg-3ee1e882-609c-43b6-aeb1-15a0d65e7d0e" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/200x400/D4AF37/222E4D?text=MinionMates+UI';"
+                         alt="MinionMates Stats/UI Screenshot" class="w-32 md:w-48 h-auto rounded-xl shadow-xl mt-12 opacity-80 transform translate-x-4 transition duration-500 hover:opacity-100 hover:scale-[1.02] hidden sm:block">
+                </div>
+            </div>
+
+            <!-- Minion Mates Gallery (Bottom) -->
+            <div class="text-center mt-10">
+                <h4 class="text-2xl font-bold mb-6 text-sog-secondary">Meet the Mates!</h4>
+                <div class="flex justify-center flex-wrap gap-4">
+                    <img src="uploaded:image_bf37e7.jpg-3d7d63bf-b43d-4aed-a379-3cf9cd0826d7" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/800x200/222E4D/D4AF37?text=Collection+Preview';"
+                         alt="MinionMates Collection Preview" class="max-w-full h-auto rounded-xl shadow-lg border-2 border-sog-primary">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Information Section -->
+    <section id="studio" class="studio-bg py-20 md:py-32 border-t border-sog-primary">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-4">The Shoulders of Giants Philosophy</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Our studio is founded on the principle of innovation built upon the greatest ideas that came before us. We strive to create deeply engaging, beautiful, and thoughtful games that are accessible to everyone. We believe in crafting experiences that leave a lasting, positive impact on our players.
+                    </p>
+                    <p class="text-lg font-semibold text-sog-secondary">
+                        "If I have seen further, it is by standing on the shoulders of Giants."
+                    </p>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
+                        <h4 class="text-xl font-bold mb-2 text-sog-secondary">Vision</h4>
+                        <p class="text-gray-400">To be a leading independent mobile game studio recognized for quality and creative distinction.</p>
+                    </div>
+                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
+                        <h4 class="text-xl font-bold mb-2 text-sog-secondary">Mission</h4>
+                        <p class="text-gray-400">Develop innovative and heartwarming games that prioritize player wellbeing and fun.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Kit & Contact Section -->
+    <section id="contact" class="minion-bg py-20 border-t border-sog-secondary/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Press Kit -->
+                <div id="presskit">
+                    <h3 class="text-3xl font-bold text-sog-secondary mb-4">Press Kit</h3>
+                    <p class="text-gray-300 mb-6">
+                        For media inquiries, brand assets, and game information, please download our official press kit.
+                    </p>
+                    <a href="#" class="inline-flex items-center px-8 py-3 bg-sog-primary text-white font-bold rounded-lg shadow-md transform hover:bg-sog-primary/80 transition duration-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download Press Kit (PDF/ZIP)
+                    </a>
+                </div>
+
+                <!-- Contact Form Mockup -->
+                <div>
+                    <h3 class="text-3xl font-bold text-sog-secondary mb-4">Get in Touch</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
+                        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
+                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300"></textarea>
+                        <button type="submit" class="w-full p-3 bg-sog-accent text-sog-dark font-bold rounded-lg shadow-lg transform hover:scale-[0.99] transition duration-300 hover:shadow-sog-accent/50">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sog-dark border-t border-sog-primary/50 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm mb-2">
+                &copy; 2025 Shoulders of Giants. All rights reserved.
+            </p>
+            <p class="text-gray-500 text-xs">
+                Website: ShouldersofGiants.app
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
