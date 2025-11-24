@@ -34,6 +34,27 @@
             background-image: radial-gradient(circle at 10% 20%, rgba(34,46,77,0.2) 0%, rgba(34,46,77,0.05) 50%, rgba(34,46,77,0) 100%),
                               radial-gradient(circle at 90% 80%, rgba(74,194,244,0.05) 0%, rgba(74,194,244,0) 50%);
         }
+        .mate-image {
+            /* Ensures images are square, and provides a nice hover effect */
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+            padding: 4px; /* Internal padding for PNGs */
+        }
+        .mate-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); /* Gold glow on hover */
+        }
+
+        /* Responsive grid adjustments */
+        @media (min-width: 640px) {
+            .mate-image {
+                width: 100px;
+                height: 100px;
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -84,10 +105,9 @@
                      class="h-14 w-14 shadow-lg object-cover rounded-full">
                 <span class="text-2xl font-extrabold text-sog-secondary tracking-wider">Shoulders of Giants</span>
             </div>
-            <!-- Desktop Nav Links --><div class="hidden md:flex space-x-8">
+            <!-- Desktop Nav Links (Press Kit removed) --><div class="hidden md:flex space-x-8">
                 <a href="#studio" class="text-gray-300 hover:text-sog-secondary transition duration-300">The Studio</a>
                 <a href="#minionmates" class="text-gray-300 hover:text-sog-secondary transition duration-300">MinionMates</a>
-                <a href="#presskit" class="text-gray-300 hover:text-sog-secondary transition duration-300">Press Kit</a>
                 <a href="#contact" class="text-gray-300 hover:text-sog-secondary transition duration-300">Contact</a>
             </div>
             <!-- Mobile Menu Button --><button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-sog-primary transition duration-300">
@@ -95,11 +115,10 @@
             </button>
         </nav>
         
-        <!-- Mobile Menu (Hidden by default) --><div id="mobile-menu" class="hidden md:hidden pb-4">
+        <!-- Mobile Menu (Press Kit removed) --><div id="mobile-menu" class="hidden md:hidden pb-4">
             <div class="flex flex-col space-y-2 px-4">
                 <a href="#studio" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">The Studio</a>
                 <a href="#minionmates" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">MinionMates</a>
-                <a href="#presskit" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">Press Kit</a>
                 <a href="#contact" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">Contact</a>
             </div>
         </div>
@@ -164,26 +183,60 @@
                     </div>
                 </div>
 
-                <!-- Screenshots Gallery --><div class="lg:w-1/2 flex justify-center space-x-4 p-4 bg-white/10 rounded-xl shadow-2xl relative">
-                    <!-- Main Image (Unicorn Mate). NOTE: For deployment, replace 'uploaded:...' with a real path like 'assets/unicorn_mate.jpg' -->
-                    <img src="uploaded:image_bf3845.jpg-bf9f1e6b-fcd9-4d6a-bb3e-fc4ccb2b6f4e" 
+                <!-- Screenshots Gallery (Main Gameplay Screenshots) -->
+                <div class="lg:w-1/2 flex justify-center space-x-4 p-4 bg-white/10 rounded-xl shadow-2xl relative">
+                    <!-- Main Image (Unicorn Mate by Fireplace: image_bf3845.jpg) -->
+                    <img src="assets/image_bf3845.jpg" 
                          onerror="this.onerror=null;this.src='https://placehold.co/250x500/222E4D/D4AF37?text=MinionMates+Screenshot';"
                          alt="MinionMates Gameplay Screenshot 1" class="w-48 md:w-64 h-auto rounded-xl shadow-2xl transform transition duration-500 hover:scale-[1.05] relative z-10">
                     
-                    <!-- Side Image (Green Mate Stats). NOTE: For deployment, replace 'uploaded:...' with a real path like 'assets/green_mate_stats.jpg' -->
-                    <img src="uploaded:image_bf386b.jpg-3ee1e882-609c-43b6-aeb1-15a0d65e7d0e" 
+                    <!-- Side Image (Green Mate Stats: image_bf386b.jpg) -->
+                    <img src="assets/image_bf386b.jpg" 
                          onerror="this.onerror=null;this.src='https://placehold.co/200x400/D4AF37/222E4D?text=MinionMates+UI';"
                          alt="MinionMates Stats/UI Screenshot" class="w-32 md:w-48 h-auto rounded-xl shadow-xl mt-12 opacity-80 transform translate-x-4 transition duration-500 hover:opacity-100 hover:scale-[1.02] hidden sm:block">
                 </div>
             </div>
 
-            <!-- Minion Mates Gallery (Bottom) --><div class="text-center mt-10">
-                <h4 class="text-2xl font-bold mb-6 text-sog-secondary">Meet the Mates!</h4>
-                <div class="flex justify-center flex-wrap gap-4">
-                    <!-- Gallery Image. NOTE: For deployment, replace 'uploaded:...' with a real path like 'assets/mates_gallery.jpg' -->
-                    <img src="uploaded:image_bf37e7.jpg-3d7d63bf-b43d-4aed-a379-3cf9cd0826d7" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/800x200/222E4D/D4AF37?text=Collection+Preview';"
-                         alt="MinionMates Collection Preview" class="max-w-full h-auto rounded-xl shadow-lg border-2 border-sog-primary">
+            <!-- Minion Mates Collection Gallery (Bottom) -->
+            <div class="text-center mt-10">
+                <h4 class="text-3xl font-bold mb-8 text-sog-secondary">Meet the Mates! The Full Collection</h4>
+                
+                <!-- Grid of individual Mates -->
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl mx-auto p-4 rounded-xl bg-slate-900/50 shadow-inner shadow-sog-primary/50">
+                    
+                    <!-- Dynamically generated Mate entries using the provided PNGs -->
+                    <img src="assets/mate_ax.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Axol';"
+                         alt="Axol Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_cat.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Cat';"
+                         alt="Cat Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_dino.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Dino';"
+                         alt="Dino Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_dog.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Dog';"
+                         alt="Dog Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    
+                    <img src="assets/mate_ghost.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Ghost';"
+                         alt="Ghost Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_goo.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Goo';"
+                         alt="Goo Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_robot.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Robot';"
+                         alt="Robot Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_unicorn.png" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Unicorn';"
+                         alt="Unicorn Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
                 </div>
             </div>
         </div>
@@ -215,31 +268,19 @@
         </div>
     </section>
 
-    <!-- Press Kit & Contact Section --><section id="contact" class="minion-bg py-20 border-t border-sog-secondary/30">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Press Kit --><div id="presskit">
-                    <h3 class="text-3xl font-bold text-sog-secondary mb-4">Press Kit</h3>
-                    <p class="text-gray-300 mb-6">
-                        For media inquiries, brand assets, and game information, please download our official press kit.
-                    </p>
-                    <a href="#" class="inline-flex items-center px-8 py-3 bg-sog-primary text-white font-bold rounded-lg shadow-md transform hover:bg-sog-primary/80 transition duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        Download Press Kit (PDF/ZIP)
-                    </a>
-                </div>
-
-                <!-- Contact Form Mockup --><div>
-                    <h3 class="text-3xl font-bold text-sog-secondary mb-4">Get in Touch</h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
-                        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
-                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300"></textarea>
-                        <button type="submit" class="w-full p-3 bg-sog-accent text-sog-dark font-bold rounded-lg shadow-lg transform hover:scale-[0.99] transition duration-300 hover:shadow-sog-accent/50">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+    <!-- Contact Section (Press Kit removed) --><section id="contact" class="minion-bg py-20 border-t border-sog-secondary/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xl">
+            <!-- Contact Form Mockup (Now centered and full width) -->
+            <div>
+                <h3 class="text-3xl font-bold text-sog-secondary mb-8 text-center">Get in Touch</h3>
+                <form class="space-y-4 p-8 bg-slate-900 rounded-xl shadow-2xl">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
+                    <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300"></textarea>
+                    <button type="submit" class="w-full p-3 bg-sog-accent text-sog-dark font-bold rounded-lg shadow-lg transform hover:scale-[0.99] transition duration-300 hover:shadow-sog-accent/50">
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
