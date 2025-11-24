@@ -42,6 +42,7 @@
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             cursor: pointer;
             padding: 4px; /* Internal padding for PNGs */
+            flex-shrink: 0; /* Important: prevents shrinking on a single line */
         }
         .mate-image:hover {
             transform: scale(1.1);
@@ -183,16 +184,16 @@
                     </div>
                 </div>
 
-                <!-- Screenshots Gallery (Main Gameplay Screenshots) -->
+                <!-- Screenshots Gallery (Main Gameplay Screenshots) - PATHS CORRECTED -->
                 <div class="lg:w-1/2 flex justify-center space-x-4 p-4 bg-white/10 rounded-xl shadow-2xl relative">
-                    <!-- Main Image (Unicorn Mate by Fireplace: image_bf3845.jpg) -->
-                    <img src="assets/image_bf3845.jpg" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/250x500/222E4D/D4AF37?text=MinionMates+Screenshot';"
+                    <!-- Main Image (MinionMates_1.jpg) -->
+                    <img src="assets/MinionMates_1.jpg" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/250x500/222E4D/D4AF37?text=MinionMates+Screenshot+1';"
                          alt="MinionMates Gameplay Screenshot 1" class="w-48 md:w-64 h-auto rounded-xl shadow-2xl transform transition duration-500 hover:scale-[1.05] relative z-10">
                     
-                    <!-- Side Image (Green Mate Stats: image_bf386b.jpg) -->
-                    <img src="assets/image_bf386b.jpg" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/200x400/D4AF37/222E4D?text=MinionMates+UI';"
+                    <!-- Side Image (MinionMates_2.jpg) -->
+                    <img src="assets/MinionMates_2.jpg" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/200x400/D4AF37/222E4D?text=MinionMates+Screenshot+2';"
                          alt="MinionMates Stats/UI Screenshot" class="w-32 md:w-48 h-auto rounded-xl shadow-xl mt-12 opacity-80 transform translate-x-4 transition duration-500 hover:opacity-100 hover:scale-[1.02] hidden sm:block">
                 </div>
             </div>
@@ -201,8 +202,8 @@
             <div class="text-center mt-10">
                 <h4 class="text-3xl font-bold mb-8 text-sog-secondary">Meet the Mates! The Full Collection</h4>
                 
-                <!-- Grid of individual Mates -->
-                <div class="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-4xl mx-auto p-4 rounded-xl bg-slate-900/50 shadow-inner shadow-sog-primary/50">
+                <!-- Horizontal Scrollable container for Mates -->
+                <div class="flex flex-nowrap overflow-x-auto justify-start sm:justify-center gap-4 sm:gap-6 max-w-full mx-auto p-4 rounded-xl bg-slate-900/50 shadow-inner shadow-sog-primary/50 whitespace-nowrap">
                     
                     <!-- Dynamically generated Mate entries using the provided PNGs -->
                     <img src="assets/mate_ax.png" 
