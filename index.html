@@ -113,7 +113,8 @@
                      class="h-14 w-14 shadow-lg object-cover rounded-full">
                 <span class="text-2xl font-extrabold text-sog-secondary tracking-wider">Shoulders of Giants</span>
             </div>
-            <!-- Desktop Nav Links (Press Kit removed) --><div class="hidden md:flex space-x-8">
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex space-x-8">
                 <a href="#studio" class="text-gray-300 hover:text-sog-secondary transition duration-300">The Studio</a>
                 <a href="#minionmates" class="text-gray-300 hover:text-sog-secondary transition duration-300">MinionMates</a>
                 <a href="#contact" class="text-gray-300 hover:text-sog-secondary transition duration-300">Contact</a>
@@ -123,7 +124,8 @@
             </button>
         </nav>
         
-        <!-- Mobile Menu (Press Kit removed) --><div id="mobile-menu" class="hidden md:hidden pb-4">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
             <div class="flex flex-col space-y-2 px-4">
                 <a href="#studio" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">The Studio</a>
                 <a href="#minionmates" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">MinionMates</a>
@@ -132,7 +134,8 @@
         </div>
     </header>
 
-    <!-- Hero Section --><section id="hero" class="studio-bg pt-24 pb-32 text-center relative overflow-hidden">
+    <!-- Hero Section -->
+    <section id="hero" class="studio-bg pt-24 pb-32 text-center relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
             <!-- SOG Logo in Hero Section (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img src="assets/sog_logo_t_3.jpg" 
                  onerror="this.onerror=null;this.src='https://placehold.co/208x208/D4AF37/171717?text=SOG+STUDIO';"
@@ -153,14 +156,43 @@
         </div>
     </section>
 
-    <!-- MinionMates Game Section --><section id="minionmates" class="minion-bg py-20 md:py-32">
+    <!-- Studio Information Section (MOVED UP) -->
+    <section id="studio" class="studio-bg py-20 md:py-32 border-t border-sog-primary">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-4">The Shoulders of Giants Philosophy</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Our studio is founded on the principle of innovation built upon the greatest ideas that came before us. We strive to create deeply engaging, beautiful, and thoughtful games that are accessible to everyone. We believe in crafting experiences that leave a lasting, positive impact on our players.
+                    </p>
+                    <p class="text-lg font-semibold text-sog-secondary">
+                        "If I have seen further, it is by standing on the shoulders of Giants."
+                    </p>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
+                        <h4 class="text-xl font-bold mb-2 text-sog-secondary">Vision</h4>
+                        <p class="text-gray-400">To be a leading independent mobile game studio recognized for quality and creative distinction.</p>
+                    </div>
+                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
+                        <h4 class="text-xl font-bold mb-2 text-sog-secondary">Mission</h4>
+                        <p class="text-gray-400">Develop innovative and heartwarming games that prioritize player wellbeing and fun.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MinionMates Game Section (MOVED DOWN, PRE-REGISTER BUTTON REMOVED) -->
+    <section id="minionmates" class="minion-bg py-20 md:py-32">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-3">MinionMates</h2>
                 <p class="text-xl text-gray-300">Your tiny companions need you. Care for them, watch them grow.</p>
             </div>
 
-            <!-- Game Overview & CTA --><div class="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20">
+            <!-- Game Overview & CTA -->
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20">
                 <div class="lg:w-1/2">
                     <h3 class="text-3xl font-bold mb-4">Tend to the Wellbeing of Your Little Mates</h3>
                     <p class="text-lg text-gray-300 mb-6">
@@ -184,12 +216,7 @@
                     <p class="text-xl font-semibold mt-8">
                         Coming Soon to iOS and Android!
                     </p>
-                    <div class="mt-4 flex flex-wrap gap-4">
-                        <a href="#" class="inline-flex items-center px-6 py-3 bg-sog-accent text-sog-dark font-extrabold rounded-lg shadow-xl transform hover:scale-[1.02] transition duration-300 hover:shadow-sog-accent/50">
-                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 18a6 6 0 100-12 6 6 0 000 12z"/></svg>
-                            Pre-Register (Link TBD)
-                        </a>
-                    </div>
+                    <!-- Removed the non-functional Pre-Register button div. -->
                 </div>
 
                 <!-- Screenshots Gallery (Main Gameplay Screenshots) -->
@@ -246,32 +273,6 @@
                          onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Unicorn';"
                          alt="Unicorn Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Studio Information Section --><section id="studio" class="studio-bg py-20 md:py-32 border-t border-sog-primary">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:flex lg:items-center lg:space-x-12">
-                <div class="lg:w-1/2 mb-12 lg:mb-0">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-4">The Shoulders of Giants Philosophy</h2>
-                    <p class="text-lg text-gray-300 mb-6">
-                        Our studio is founded on the principle of innovation built upon the greatest ideas that came before us. We strive to create deeply engaging, beautiful, and thoughtful games that are accessible to everyone. We believe in crafting experiences that leave a lasting, positive impact on our players.
-                    </p>
-                    <p class="text-lg font-semibold text-sog-secondary">
-                        "If I have seen further, it is by standing on the shoulders of Giants."
-                    </p>
-                </div>
-                <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
-                        <h4 class="text-xl font-bold mb-2 text-sog-secondary">Vision</h4>
-                        <p class="text-gray-400">To be a leading independent mobile game studio recognized for quality and creative distinction.</p>
-                    </div>
-                    <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
-                        <h4 class="text-xl font-bold mb-2 text-sog-secondary">Mission</h4>
-                        <p class="text-gray-400">Develop innovative and heartwarming games that prioritize player wellbeing and fun.</p>
-                    </div>
                 </div>
             </div>
         </div>
