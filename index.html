@@ -16,6 +16,12 @@
             --color-accent: #4AC2F4; /* Star/Glow Cyan */
             --color-dark: #171717; /* Near Black / Dark Stone */
         }
+        
+        /* Global CSS improvement: Enable smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
         .text-gradient {
             /* Cosmic gradient from cyan glow to bronze gold */
             background-image: linear-gradient(to right, var(--color-accent), var(--color-secondary));
@@ -102,6 +108,7 @@
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
             <div class="flex items-center space-x-3">
                 <!-- SOG Logo in Header (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img src="assets/sog_logo_t_3.jpg" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/56x56/D4AF37/171717?text=SOG';"
                      alt="Shoulders of Giants Logo" 
                      class="h-14 w-14 shadow-lg object-cover rounded-full">
                 <span class="text-2xl font-extrabold text-sog-secondary tracking-wider">Shoulders of Giants</span>
@@ -128,6 +135,7 @@
     <!-- Hero Section --><section id="hero" class="studio-bg pt-24 pb-32 text-center relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
             <!-- SOG Logo in Hero Section (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img src="assets/sog_logo_t_3.jpg" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/208x208/D4AF37/171717?text=SOG+STUDIO';"
                  alt="Shoulders of Giants Logo" 
                  class="mx-auto h-52 w-52 mb-8 shadow-2xl rounded-full">
 
@@ -184,7 +192,7 @@
                     </div>
                 </div>
 
-                <!-- Screenshots Gallery (Main Gameplay Screenshots) - PATHS CORRECTED -->
+                <!-- Screenshots Gallery (Main Gameplay Screenshots) -->
                 <div class="lg:w-1/2 flex justify-center space-x-4 p-4 bg-white/10 rounded-xl shadow-2xl relative">
                     <!-- Main Image (MinionMates_1.jpg) -->
                     <img src="assets/MinionMates_1.jpg" 
@@ -269,20 +277,24 @@
         </div>
     </section>
 
-    <!-- Contact Section (Press Kit removed) --><section id="contact" class="minion-bg py-20 border-t border-sog-secondary/30">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xl">
-            <!-- Contact Form Mockup (Now centered and full width) -->
-            <div>
-                <h3 class="text-3xl font-bold text-sog-secondary mb-8 text-center">Get in Touch</h3>
-                <form class="space-y-4 p-8 bg-slate-900 rounded-xl shadow-2xl">
-                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
-                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300">
-                    <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:ring-sog-accent focus:border-sog-accent transition duration-300"></textarea>
-                    <button type="submit" class="w-full p-3 bg-sog-accent text-sog-dark font-bold rounded-lg shadow-lg transform hover:scale-[0.99] transition duration-300 hover:shadow-sog-accent/50">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="minion-bg py-20 border-t border-sog-secondary/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
+            
+            <h3 class="text-4xl font-extrabold text-sog-secondary mb-4">Get in Touch Directly</h3>
+            <p class="text-xl text-gray-300 mb-8">
+                For press inquiries, partnerships, or general questions, please reach out to us via email.
+            </p>
+
+            <a href="mailto:Info@shouldersofgiants.app" 
+               class="inline-flex items-center justify-center px-8 py-4 bg-sog-accent text-sog-dark font-extrabold text-lg rounded-full shadow-2xl transform hover:scale-[1.05] transition duration-300 hover:shadow-sog-accent/50 group">
+                <!-- Icon for email (using Lucide/generic SVG) -->
+                <svg class="w-6 h-6 mr-3 group-hover:scale-110 transition duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span class="text-sog-dark">Info@shouldersofgiants.app</span>
+            </a>
         </div>
     </section>
 
