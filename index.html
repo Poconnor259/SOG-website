@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoulders of Giants - Creators of MinionMates</title>
-    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Import the Cinzel font to match the epic/stone style of the logo */
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
 
         /* Custom styles and colors based on the logo's cosmic/stone theme */
         :root {
-            --color-primary: #222E4D; /* Deep Cosmic Blue */
-            --color-secondary: #D4AF37; /* Bronze/Gold Accent */
-            --color-accent: #4AC2F4; /* Star/Glow Cyan */
-            --color-dark: #171717; /* Near Black / Dark Stone */
+            --color-primary: #222E4D;
+            /* Deep Cosmic Blue */
+            --color-secondary: #D4AF37;
+            /* Bronze/Gold Accent */
+            --color-accent: #4AC2F4;
+            /* Star/Glow Cyan */
+            --color-dark: #171717;
+            /* Near Black / Dark Stone */
         }
-        
+
         /* Global CSS improvement: Enable smooth scrolling for anchor links */
         html {
             scroll-behavior: smooth;
@@ -29,17 +35,20 @@
             background-clip: text;
             color: transparent;
         }
+
         .studio-bg {
             background-color: var(--color-dark);
             /* Updated tile color to fit darker theme */
             background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23222E4D' fill-opacity='0.15'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v2H1V1zM1 3h2v40H1V3zm3 0h38v2H3V3zM3 5h2v40H3V5zm3 0h36v2H5V5zm1 2h2v38H7V7zm3 0h32v2H9V7zm1 2h2v34H11V9zm3 0h28v2H13V9zm1 2h2v32H15V11zm3 0h24v2H17V11zm1 2h2v30H19V13zm3 0h20v2H21V13zm1 2h2v28H23V15zm3 0h16v2H25V15zm1 2h2v26H27V17zm3 0h12v2H29V17zm1 2h2v24H31V19zm3 0h8v2H33V19zm1 2h2v22H35V21zm3 0h4v2H37V21zm1 2h2v20H39V23z' fill='%23171717'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
         .minion-bg {
             background-color: var(--color-dark);
             /* Using the new primary color for the background glow */
-            background-image: radial-gradient(circle at 10% 20%, rgba(34,46,77,0.2) 0%, rgba(34,46,77,0.05) 50%, rgba(34,46,77,0) 100%),
-                              radial-gradient(circle at 90% 80%, rgba(74,194,244,0.05) 0%, rgba(74,194,244,0) 50%);
+            background-image: radial-gradient(circle at 10% 20%, rgba(34, 46, 77, 0.2) 0%, rgba(34, 46, 77, 0.05) 50%, rgba(34, 46, 77, 0) 100%),
+                radial-gradient(circle at 90% 80%, rgba(74, 194, 244, 0.05) 0%, rgba(74, 194, 244, 0) 50%);
         }
+
         .mate-image {
             /* Ensures images are square, and provides a nice hover effect */
             width: 80px;
@@ -47,12 +56,16 @@
             object-fit: contain;
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             cursor: pointer;
-            padding: 4px; /* Internal padding for PNGs */
-            flex-shrink: 0; /* Important: prevents shrinking on a single line */
+            padding: 4px;
+            /* Internal padding for PNGs */
+            flex-shrink: 0;
+            /* Important: prevents shrinking on a single line */
         }
+
         .mate-image:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); /* Gold glow on hover */
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+            /* Gold glow on hover */
         }
 
         /* Responsive grid adjustments */
@@ -75,7 +88,7 @@
                         'sog-dark': 'var(--color-dark)',
                         'sog-primary': 'var(--color-primary)',
                         'sog-secondary': 'var(--color-secondary)',
-                        'sog-accent': 'var(--color-accent)', 
+                        'sog-accent': 'var(--color-accent)',
                     }
                 }
             }
@@ -102,36 +115,45 @@
         });
     </script>
 </head>
+
 <body class="font-sans antialiased text-white bg-sog-dark">
 
-    <!-- Header / Navigation --><header class="sticky top-0 z-50 bg-sog-dark/95 backdrop-blur-sm shadow-xl">
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-sog-dark/95 backdrop-blur-sm shadow-xl">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
             <div class="flex items-center space-x-3">
-                <!-- SOG Logo in Header (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img src="assets/sog_logo_t_3.jpg" 
-                     onerror="this.onerror=null;this.src='https://placehold.co/56x56/D4AF37/171717?text=SOG';"
-                     alt="Shoulders of Giants Logo" 
-                     class="h-14 w-14 shadow-lg object-cover rounded-full">
+                <!-- SOG Logo in Header (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img src="assets/sog_logo_t_3.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/56x56/D4AF37/171717?text=SOG';"
+                    alt="Shoulders of Giants Logo" class="h-14 w-14 shadow-lg object-cover rounded-full">
                 <span class="text-2xl font-extrabold text-sog-secondary tracking-wider">Shoulders of Giants</span>
             </div>
             <!-- Desktop Nav Links -->
             <div class="hidden md:flex space-x-8">
                 <a href="#studio" class="text-gray-300 hover:text-sog-secondary transition duration-300">The Studio</a>
-                <a href="#minionmates" class="text-gray-300 hover:text-sog-secondary transition duration-300">MinionMates</a>
-                <a href="/IR" class="text-gray-300 hover:text-sog-accent transition duration-300 font-semibold">Infinite Realms</a>
+                <a href="#games" class="text-gray-300 hover:text-sog-secondary transition duration-300">Our Games</a>
                 <a href="#contact" class="text-gray-300 hover:text-sog-secondary transition duration-300">Contact</a>
             </div>
-            <!-- Mobile Menu Button --><button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-sog-primary transition duration-300">
-                <svg class="w-6 h-6 text-sog-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <!-- Mobile Menu Button --><button id="menu-button"
+                class="md:hidden p-2 rounded-md hover:bg-sog-primary transition duration-300">
+                <svg class="w-6 h-6 text-sog-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
             </button>
         </nav>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-4">
             <div class="flex flex-col space-y-2 px-4">
-                <a href="#studio" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">The Studio</a>
-                <a href="#minionmates" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">MinionMates</a>
-                <a href="/IR" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300 font-semibold">Infinite Realms</a>
-                <a href="#contact" class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">Contact</a>
+                <a href="#studio"
+                    class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">The
+                    Studio</a>
+                <a href="#games"
+                    class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">Our
+                    Games</a>
+                <a href="#contact"
+                    class="block py-2 text-gray-300 hover:bg-sog-primary rounded-lg px-3 transition duration-300">Contact</a>
             </div>
         </div>
     </header>
@@ -139,10 +161,10 @@
     <!-- Hero Section -->
     <section id="hero" class="studio-bg pt-24 pb-32 text-center relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
-            <!-- SOG Logo in Hero Section (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img src="assets/sog_logo_t_3.jpg" 
-                 onerror="this.onerror=null;this.src='https://placehold.co/208x208/D4AF37/171717?text=SOG+STUDIO';"
-                 alt="Shoulders of Giants Logo" 
-                 class="mx-auto h-52 w-52 mb-8 shadow-2xl rounded-full">
+            <!-- SOG Logo in Hero Section (REAL-WORLD PATH: assets/sog_logo_t_3.jpg) --><img
+                src="assets/sog_logo_t_3.jpg"
+                onerror="this.onerror=null;this.src='https://placehold.co/208x208/D4AF37/171717?text=SOG+STUDIO';"
+                alt="Shoulders of Giants Logo" class="mx-auto h-52 w-52 mb-8 shadow-2xl rounded-full">
 
 
             <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
@@ -152,8 +174,9 @@
                 Building worlds of wonder, one giant leap at a time.
             </p>
 
-            <a href="#minionmates" class="inline-block px-10 py-4 bg-sog-secondary text-sog-dark font-bold text-lg rounded-full shadow-2xl transform hover:scale-105 transition duration-300 hover:shadow-sog-secondary/50">
-                Discover Our First Game: MinionMates
+            <a href="#games"
+                class="inline-block px-10 py-4 bg-sog-secondary text-sog-dark font-bold text-lg rounded-full shadow-2xl transform hover:scale-105 transition duration-300 hover:shadow-sog-secondary/50">
+                Explore Our Games
             </a>
         </div>
     </section>
@@ -163,9 +186,13 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex lg:items-center lg:space-x-12">
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-4">The Shoulders of Giants Philosophy</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-4">The Shoulders of Giants
+                        Philosophy</h2>
                     <p class="text-lg text-gray-300 mb-6">
-                        Our studio is founded on the principle of innovation built upon the greatest ideas that came before us. We strive to create deeply engaging, beautiful, and thoughtful games that are accessible to everyone. We believe in crafting experiences that leave a lasting, positive impact on our players.
+                        Our studio is founded on the principle of innovation built upon the greatest ideas that came
+                        before us. We strive to create deeply engaging, beautiful, and thoughtful games that are
+                        accessible to everyone. We believe in crafting experiences that leave a lasting, positive impact
+                        on our players.
                     </p>
                     <p class="text-lg font-semibold text-sog-secondary">
                         "If I have seen further, it is by standing on the shoulders of Giants."
@@ -174,19 +201,136 @@
                 <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
                         <h4 class="text-xl font-bold mb-2 text-sog-secondary">Vision</h4>
-                        <p class="text-gray-400">To be a leading independent mobile game studio recognized for quality and creative distinction.</p>
+                        <p class="text-gray-400">To be a leading independent mobile game studio recognized for quality
+                            and creative distinction.</p>
                     </div>
                     <div class="p-6 bg-slate-900 rounded-xl shadow-lg border-b-4 border-sog-primary">
                         <h4 class="text-xl font-bold mb-2 text-sog-secondary">Mission</h4>
-                        <p class="text-gray-400">Creating the next generation of games, driven by innovation and exceptional fun. We strive to make games that are positive and memorable for every player.</p>
+                        <p class="text-gray-400">Creating the next generation of games, driven by innovation and
+                            exceptional fun. We strive to make games that are positive and memorable for every player.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MinionMates Game Section (MOVED DOWN, PRE-REGISTER BUTTON REMOVED) -->
-    <section id="minionmates" class="minion-bg py-20 md:py-32">
+    <!-- Our Games Showcase Section -->
+    <section id="games" class="minion-bg py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-3">Our Games</h2>
+                <p class="text-xl text-gray-300">Crafting unforgettable experiences, one adventure at a time.</p>
+            </div>
+
+            <!-- Two-Column Game Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+
+                <!-- MinionMates Card -->
+                <div
+                    class="bg-slate-900/80 rounded-2xl p-8 shadow-2xl border-2 border-sog-secondary/30 hover:border-sog-secondary transition duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-3xl font-bold text-sog-secondary">MinionMates</h3>
+                        <span class="px-4 py-2 bg-sog-accent/20 text-sog-accent text-sm font-bold rounded-full">Coming
+                            Soon</span>
+                    </div>
+
+                    <p class="text-lg text-gray-300 mb-6">
+                        Care for adorable creatures in this charming mobile pet-care game. Feed, play, and watch your
+                        MinionMates grow!
+                    </p>
+
+                    <ul class="space-y-3 text-gray-200 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Dozens of unique companions to collect
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Beautiful, dynamic backgrounds
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Track Hunger, Energy & Happiness
+                        </li>
+                    </ul>
+
+                    <a href="#minionmates"
+                        class="inline-block w-full text-center px-8 py-4 bg-sog-secondary text-sog-dark font-bold text-lg rounded-full shadow-xl transform hover:scale-105 transition duration-300">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Infinite Realms Card -->
+                <div
+                    class="bg-slate-900/80 rounded-2xl p-8 shadow-2xl border-2 border-sog-accent/30 hover:border-sog-accent transition duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-3xl font-bold text-sog-accent">Infinite Realms</h3>
+                        <span class="px-4 py-2 bg-green-500/20 text-green-400 text-sm font-bold rounded-full">Play Now
+                            (Beta)</span>
+                    </div>
+
+                    <p class="text-lg text-gray-300 mb-6">
+                        Embark on epic AI-powered adventures in dynamic fantasy worlds. Your choices shape unique,
+                        evolving stories.
+                    </p>
+
+                    <ul class="space-y-3 text-gray-200 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Claude Opus 4.5 AI storytelling
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Three unique fantasy worlds
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Every playthrough is unique
+                        </li>
+                    </ul>
+
+                    <a href="/IR"
+                        class="inline-block w-full text-center px-8 py-4 bg-sog-accent text-sog-dark font-bold text-lg rounded-full shadow-xl transform hover:scale-105 transition duration-300">
+                        Play Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MinionMates Details Section -->
+    <section id="minionmates" class="minion-bg py-20 md:py-32 border-t border-sog-secondary/30">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-sog-secondary mb-3">MinionMates</h2>
@@ -198,19 +342,36 @@
                 <div class="lg:w-1/2">
                     <h3 class="text-3xl font-bold mb-4">Tend to the Wellbeing of Your Little Mates</h3>
                     <p class="text-lg text-gray-300 mb-6">
-                        MinionMates is a charming mobile pet-care game where you are responsible for the health, happiness, and overall well-being of a diverse cast of adorable creatures. From feeding and bathing to playing and studying, every action matters!
+                        MinionMates is a charming mobile pet-care game where you are responsible for the health,
+                        happiness, and overall well-being of a diverse cast of adorable creatures. From feeding and
+                        bathing to playing and studying, every action matters!
                     </p>
                     <ul class="space-y-3 text-gray-200 mb-8">
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                             Beautifully designed, changing backgrounds.
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                             Dozens of unique MinionMates to collect and bond with.
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <svg class="w-6 h-6 text-sog-accent mr-3 mt-1 flex-shrink-0" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                             Intuitive interface for tracking Hunger, Energy, and Happiness.
                         </li>
                     </ul>
@@ -224,56 +385,67 @@
                 <!-- Screenshots Gallery (Main Gameplay Screenshots) -->
                 <div class="lg:w-1/2 flex justify-center space-x-4 p-4 bg-white/10 rounded-xl shadow-2xl relative">
                     <!-- Main Image (MinionMates_1.jpg) -->
-                    <img src="assets/MinionMates_1.jpg" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/250x500/222E4D/D4AF37?text=MinionMates+Screenshot+1';"
-                         alt="MinionMates Gameplay Screenshot 1" class="w-48 md:w-64 h-auto rounded-xl shadow-2xl transform transition duration-500 hover:scale-[1.05] relative z-10">
-                    
+                    <img src="assets/MinionMates_1.jpg"
+                        onerror="this.onerror=null;this.src='https://placehold.co/250x500/222E4D/D4AF37?text=MinionMates+Screenshot+1';"
+                        alt="MinionMates Gameplay Screenshot 1"
+                        class="w-48 md:w-64 h-auto rounded-xl shadow-2xl transform transition duration-500 hover:scale-[1.05] relative z-10">
+
                     <!-- Side Image (MinionMates_2.jpg) -->
-                    <img src="assets/MinionMates_2.jpg" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/200x400/D4AF37/222E4D?text=MinionMates+Screenshot+2';"
-                         alt="MinionMates Stats/UI Screenshot" class="w-32 md:w-48 h-auto rounded-xl shadow-xl mt-12 opacity-80 transform translate-x-4 transition duration-500 hover:opacity-100 hover:scale-[1.02] hidden sm:block">
+                    <img src="assets/MinionMates_2.jpg"
+                        onerror="this.onerror=null;this.src='https://placehold.co/200x400/D4AF37/222E4D?text=MinionMates+Screenshot+2';"
+                        alt="MinionMates Stats/UI Screenshot"
+                        class="w-32 md:w-48 h-auto rounded-xl shadow-xl mt-12 opacity-80 transform translate-x-4 transition duration-500 hover:opacity-100 hover:scale-[1.02] hidden sm:block">
                 </div>
             </div>
 
             <!-- Minion Mates Collection Gallery (Bottom) -->
             <div class="text-center mt-10">
                 <h4 class="text-3xl font-bold mb-8 text-sog-secondary">Meet the Mates! The Full Collection</h4>
-                
+
                 <!-- Horizontal Scrollable container for Mates -->
-                <div class="flex flex-nowrap overflow-x-auto justify-start sm:justify-center gap-4 sm:gap-6 max-w-full mx-auto p-4 rounded-xl bg-slate-900/50 shadow-inner shadow-sog-primary/50 whitespace-nowrap">
-                    
+                <div
+                    class="flex flex-nowrap overflow-x-auto justify-start sm:justify-center gap-4 sm:gap-6 max-w-full mx-auto p-4 rounded-xl bg-slate-900/50 shadow-inner shadow-sog-primary/50 whitespace-nowrap">
+
                     <!-- Dynamically generated Mate entries using the provided PNGs -->
-                    <img src="assets/mate_ax.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Axol';"
-                         alt="Axol Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_ax.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Axol';"
+                        alt="Axol Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                    <img src="assets/mate_cat.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Cat';"
-                         alt="Cat Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_cat.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Cat';"
+                        alt="Cat Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                    <img src="assets/mate_dino.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Dino';"
-                         alt="Dino Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_dino.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Dino';"
+                        alt="Dino Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                    <img src="assets/mate_dog.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Dog';"
-                         alt="Dog Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
-                    
-                    <img src="assets/mate_ghost.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Ghost';"
-                         alt="Ghost Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_dog.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Dog';"
+                        alt="Dog Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                    <img src="assets/mate_goo.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Goo';"
-                         alt="Goo Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_ghost.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Ghost';"
+                        alt="Ghost Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                    <img src="assets/mate_robot.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Robot';"
-                         alt="Robot Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_goo.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Goo';"
+                        alt="Goo Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
-                    <img src="assets/mate_unicorn.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Unicorn';"
-                         alt="Unicorn Mate" class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+                    <img src="assets/mate_robot.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Robot';"
+                        alt="Robot Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
+
+                    <img src="assets/mate_unicorn.png"
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/222E4D/4AC2F4?text=Unicorn';"
+                        alt="Unicorn Mate"
+                        class="mate-image rounded-full bg-sog-primary border-2 border-sog-accent shadow-lg">
 
                 </div>
             </div>
@@ -283,16 +455,18 @@
     <!-- Contact Section -->
     <section id="contact" class="minion-bg py-20 border-t border-sog-secondary/30">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
-            
+
             <h3 class="text-4xl font-extrabold text-sog-secondary mb-4">Get in Touch Directly</h3>
             <p class="text-xl text-gray-300 mb-8">
                 For press inquiries, partnerships, or general questions, please reach out to us via email.
             </p>
 
-            <a href="mailto:Info@shouldersofgiants.app" 
-               class="inline-flex items-center justify-center px-8 py-4 bg-sog-accent text-sog-dark font-extrabold text-lg rounded-full shadow-2xl transform hover:scale-[1.05] transition duration-300 hover:shadow-sog-accent/50 group">
+            <a href="mailto:Info@shouldersofgiants.app"
+                class="inline-flex items-center justify-center px-8 py-4 bg-sog-accent text-sog-dark font-extrabold text-lg rounded-full shadow-2xl transform hover:scale-[1.05] transition duration-300 hover:shadow-sog-accent/50 group">
                 <!-- Icon for email (using Lucide/generic SVG) -->
-                <svg class="w-6 h-6 mr-3 group-hover:scale-110 transition duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="w-6 h-6 mr-3 group-hover:scale-110 transition duration-300"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
@@ -301,7 +475,8 @@
         </div>
     </section>
 
-    <!-- Footer --><footer class="bg-sog-dark border-t border-sog-primary/50 py-8">
+    <!-- Footer -->
+    <footer class="bg-sog-dark border-t border-sog-primary/50 py-8">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400 text-sm mb-2">
                 &copy; 2025 Shoulders of Giants. All rights reserved.
@@ -313,5 +488,5 @@
     </footer>
 
 </body>
-</html>
 
+</html>
