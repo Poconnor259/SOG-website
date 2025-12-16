@@ -1,0 +1,18 @@
+# Netlify configuration for SOG Website + Infinite Realms
+
+[build]
+  publish = "."
+
+# Redirect for Infinite Realms SPA
+[[redirects]]
+  from = "/IR/*"
+  to = "/IR/index.html"
+  status = 200
+  force = false
+
+# Keep existing root redirects if you have any
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
