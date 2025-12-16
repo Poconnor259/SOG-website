@@ -3,14 +3,24 @@
 [build]
   publish = "."
 
-# Redirect for Infinite Realms SPA
+# Serve static files directly (no redirect)
+[[redirects]]
+  from = "/IR/_expo/*"
+  to = "/IR/_expo/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/IR/assets/*"
+  to = "/IR/assets/:splat"
+  status = 200
+
+# Infinite Realms SPA routing - only for HTML pages
 [[redirects]]
   from = "/IR/*"
   to = "/IR/index.html"
   status = 200
-  force = false
 
-# Keep existing root redirects if you have any
+# Keep existing root redirects
 [[redirects]]
   from = "/*"
   to = "/index.html"
