@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Shoulders of Giants</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import the Cinzel font to match the epic/stone style of the logo */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        /* Custom styles and colors based on the logo's cosmic/stone theme */
+        :root {
+            --color-primary: #222E4D;
+            /* Deep Cosmic Blue */
+            --color-secondary: #D4AF37;
+            /* Bronze/Gold Accent */
+            --color-accent: #4AC2F4;
+            /* Star/Glow Cyan */
+            --color-dark: #171717;
+            /* Near Black / Dark Stone */
+        }
+
+        /* Global CSS improvement: Enable smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+
+        .text-gradient {
+            /* Cosmic gradient from cyan glow to bronze gold */
+            background-image: linear-gradient(to right, var(--color-accent), var(--color-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .studio-bg {
+            background-color: var(--color-dark);
+            /* Updated tile color to fit darker theme */
+            background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23222E4D' fill-opacity='0.15'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v2H1V1zM1 3h2v40H1V3zm3 0h38v2H3V3zM3 5h2v40H3V5zm3 0h36v2H5V5zm1 2h2v38H7V7zm3 0h32v2H9V7zm1 2h2v34H11V9zm3 0h28v2H13V9zm1 2h2v32H15V11zm3 0h24v2H17V11zm1 2h2v30H19V13zm3 0h20v2H21V13zm1 2h2v28H23V15zm3 0h16v2H25V15zm1 2h2v26H27V17zm3 0h12v2H29V17zm1 2h2v24H31V19zm3 0h8v2H33V19zm1 2h2v22H35V21zm3 0h4v2H37V21zm1 2h2v20H39V23z' fill='%23171717'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        'sog-dark': 'var(--color-dark)',
+                        'sog-primary': 'var(--color-primary)',
+                        'sog-secondary': 'var(--color-secondary)',
+                        'sog-accent': 'var(--color-accent)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased text-white bg-sog-dark text-gray-300">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-sog-dark/95 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="assets/sog_logo_t_3.jpg"
+                        onerror="this.onerror=null;this.src='https://placehold.co/56x56/D4AF37/171717?text=SOG';"
+                        alt="Shoulders of Giants Logo" class="h-10 w-10 shadow-lg object-cover rounded-full">
+                    <span class="text-xl font-extrabold text-sog-secondary tracking-wider font-serif">Shoulders of Giants</span>
+                </a>
+            </div>
+            <div>
+                <a href="index.html" class="text-gray-300 hover:text-sog-secondary transition duration-300">Back to Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="studio-bg min-h-screen py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl bg-slate-900/90 p-8 md:p-12 rounded-2xl shadow-2xl border border-sog-primary/50">
+            
+            <h1 class="text-3xl md:text-5xl font-extrabold text-sog-secondary mb-8 text-center">Privacy Policy</h1>
+            
+            <div class="prose prose-invert prose-lg max-w-none">
+                <p class="text-sm text-gray-400 mb-8 text-center">Last updated: December 26, 2025</p>
+
+                <p>
+                    Shoulders of Giants ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website <strong>shouldersofgiants.app</strong> or play our mobile games, including <strong>MinionMates</strong> and <strong>Infinite Realms</strong> (collectively, the "Service").
+                </p>
+
+                <h3 class="text-2xl font-bold text-sog-accent mt-8 mb-4">1. Information Collection and Use</h3>
+                <p>
+                    For a better experience while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.
+                </p>
+                <p>
+                    The app does use third-party services that may collect information used to identify you.
+                </p>
+                <p>
+                    Link to privacy policy of third-party service providers used by the app:
+                </p>
+                <ul class="list-disc pl-6 space-y-2 mb-4">
+                    <li><a href="https://www.google.com/policies/privacy/" class="text-sog-secondary hover:underline" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
+                    <li><a href="https://firebase.google.com/policies/analytics" class="text-sog-secondary hover:underline" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy/" class="text-sog-secondary hover:underline" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
+                    <li><a href="https://unity3d.com/legal/privacy-policy" class="text-sog-secondary hover:underline" target="_blank" rel="noopener noreferrer">Unity</a></li>
+                </ul>
+
+                <h3 class="text-2xl font-bold text-sog-accent mt-8 mb-4">2. Log Data</h3>
+                <p>
+                    We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
+                </p>
+
+                <h3 class="text-2xl font-bold text-sog-accent mt-8 mb-4">3. Children's Privacy</h3>
+                <p>
+                    <strong>MinionMates</strong> and <strong>Infinite Realms</strong> are designed to be enjoyed by users of all ages. However, we do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions.
+                </p>
+
+                <h3 class="text-2xl font-bold text-sog-accent mt-8 mb-4">4. Security</h3>
+                <p>
+                    We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+                </p>
+
+                <h3 class="text-2xl font-bold text-sog-accent mt-8 mb-4">5. Changes to This Privacy Policy</h3>
+                <p>
+                    We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+                </p>
+
+                <h3 class="text-2xl font-bold text-sog-accent mt-8 mb-4">6. Contact Us</h3>
+                <p>
+                    If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
+                </p>
+                <div class="mt-4 p-4 bg-sog-dark/50 rounded-lg border border-sog-primary">
+                    <p class="font-bold text-sog-secondary">Shoulders of Giants</p>
+                    <p>Email: <a href="mailto:Info@shouldersofgiants.app" class="text-sog-accent hover:underline">Info@shouldersofgiants.app</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sog-dark border-t border-sog-primary/50 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm mb-2">
+                &copy; 2025 Shoulders of Giants. All rights reserved.
+            </p>
+            <p class="text-gray-500 text-xs">
+                Website: ShouldersofGiants.app
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
